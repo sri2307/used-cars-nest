@@ -1,9 +1,10 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
-import { runInThisContext } from 'vm';
+import { Serialize } from 'src/utils/decarators';
 import { UserDto } from './dtos/user.dto';
 import { UserService } from './user.service';
 
 @Controller('auth')
+@Serialize(UserDto)
 export class UserController {
     constructor(private userService:UserService){}
     @Post('signup')
@@ -20,8 +21,7 @@ export class UserController {
     }
     @Patch('update/:id')
      updateUser(@Param('id') id:number,@Body() body:Partial<UserDto>){
-        const user = this.userService.update(id,body)
-        return user
+        return this.userService.update(id,body)
     }
     @Delete('delete/:id')
     removeUser(@Param('id') id:number){
