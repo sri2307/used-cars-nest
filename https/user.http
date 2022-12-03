@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ### Get User by Id
 
-GET http://localhost:3000/auth/find/2
+GET http://localhost:3000/auth/find/12
 Content-Type: application/json
 
 ### Get all users
@@ -19,15 +19,14 @@ GET http://localhost:3000/auth/find
 Content-Type: application/json
 
 ### Update User
-POST http://localhost:3000/auth/update
+PATCH http://localhost:3000/auth/update/51
 Content-Type: application/json
 
 {
-    "id":1,
     "email":"sri@test.com"
 }
 
 ### Remove User
-POST http://localhost:3000/auth/delete/2
+DELETE http://localhost:3000/auth/delete/132
 Content-Type: application/json
 
