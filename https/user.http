@@ -15,7 +15,7 @@ Content-Type: application/json
 
 ### Get all users
 
-GET http://localhost:3000/auth/find
+GET http://localhost:3000/auth/find?email=sri@test.com
 Content-Type: application/json
 
 ### Update User
