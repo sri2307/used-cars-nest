@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { Serialize } from 'src/utils/decarators';
 import { UserDto } from './dtos/user.dto';
 import { UserService } from './user.service';
@@ -16,8 +16,8 @@ export class UserController {
         return this.userService.findOne(id)
     }
     @Get('find')
-    getUsers(){
-        return this.userService.find()
+    getUsers(@Query('email') email:string){
+        return this.userService.find(email)
     }
     @Patch('update/:id')
      updateUser(@Param('id') id:number,@Body() body:Partial<UserDto>){
