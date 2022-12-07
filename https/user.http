@@ -4,18 +4,18 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email":"test2@test.com",
+    "email":"test234a@test.com",
     "password":"Test@1234"
 }
 
 ### Get User by Id
 
-GET http://localhost:3000/auth/find/15
+GET http://localhost:3000/auth/find/17
 Content-Type: application/json
 
 ### Get all users
 
-GET http://localhost:3000/auth/find?email=sri@test.com
+GET http://localhost:3000/auth/find
 Content-Type: application/json
 
 ### Update User
