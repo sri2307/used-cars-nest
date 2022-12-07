@@ -24,6 +24,10 @@ export class UserController {
   createUser(@Body() body: UserDto) {
     return this.authService.signUp(body)
   }
+  @Post('login')
+  login(@Body() body: UserDto) {
+    return this.authService.signIn(body)
+  }
   @Get('find/:id')
   getOneUser(@Param('id') id: number) {
     return this.userService.findOne(id);
