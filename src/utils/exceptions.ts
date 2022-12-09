@@ -7,3 +7,7 @@ export const notFoundException=(req:any,message:string)=>{
 export const badRequestException=(req:any,message:string)=>{
     if(req.length) throw new BadRequestException(message)
 }
+
+export const badPasswordException=(message:string)=>{
+    throw new BadRequestException(message)
+}
