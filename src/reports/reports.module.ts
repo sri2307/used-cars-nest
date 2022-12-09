@@ -5,7 +5,7 @@ import { Reports } from './reports.entity';
 import { ReportsService } from './reports.service';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([Reports])],
+  imports: [TypeOrmModule.forFeature([Reports])],
   controllers: [ReportsController],
   providers: [ReportsService],
 })

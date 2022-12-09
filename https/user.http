@@ -4,7 +4,7 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email":"test234a@test.com",
+    "email":"test10000@test.com",
     "password":"Test@1234"
 }
 
@@ -14,9 +14,20 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email":"test234a@test.com",
-    "password":"Test@134"
+    "email":"test10@test.com",
+    "password":"Test@1234"
 }
+
+### signout
+
+POST http://localhost:3000/auth/signout
+Content-Type: application/json
+### whoami
+
+GET  http://localhost:3000/auth/whoami
+Content-Type: application/json
+
+
 ### Get User by Id
 
 GET http://localhost:3000/auth/find/17
